@@ -1,21 +1,17 @@
+function main() {
 cc.game.onStart = function(){
-    if(!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
-        document.body.removeChild(document.getElementById("cocosLoading"));
-
-    var designSize = cc.size(480, 800);
-    var screenSize = cc.view.getFrameSize();
-
-    if(!cc.sys.isNative && screenSize.height < 800){
-        designSize = cc.size(320, 480);
-        cc.loader.resPath = "res/Normal";
-    }else{
-        cc.loader.resPath = "res/HD";
-    }
-    cc.view.setDesignResolutionSize(designSize.width, designSize.height, cc.ResolutionPolicy.SHOW_ALL);
-
+    var background = new cc.Sprite(res.background_png);
+    var bgSize = background.getContentSize();
+    
+    cc.view.adjustViewPort(true);
+    cc.view.setDesignResolutionSize(bgSize.width, bgSize.height, cc.ResolutionPolicy.SHOW_ALL);
+    cc.view.resizeWithBrowserSize(true);
+    
     //load resources
     cc.LoaderScene.preload(g_resources, function () {
-        cc.director.runScene(new MyScene());
+        cc.director.runScene(new WelcomeScene());
     }, this);
 };
 cc.game.run();
+}
+window.onload = main;

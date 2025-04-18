@@ -1,20 +1,11 @@
-var s_HelloWorld = "HelloWorld.jpg";
-var s_CloseNormal = "CloseNormal.png";
-var s_CloseSelected = "CloseSelected.png";
+var res = {
+    background_png: "res/background.png",
+    whale_png: "res/whale.png",
+    hammer_png: "res/hammer.png"
+};
 
 var g_resources = [
-    //image
-    s_HelloWorld,
-    s_CloseNormal,
-    s_CloseSelected
-
-    //plist
-
-    //fnt
-
-    //tmx
-
-    //bgm
-
-    //effect
+    res.background_png,
+    res.whale_png,
+    res.hammer_png
 ];
