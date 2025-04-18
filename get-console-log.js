@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
 
 // Configuration
 const PORT = 3000;
-const WAIT_TIME_MS = 3000; // Wait time in milliseconds
+const WAIT_TIME_MS = 10000; // Wait time in milliseconds
 
 // Create a server
 const server = http.createServer((req, res) => {

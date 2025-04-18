@@ -1,16 +1,19 @@
 {
-    "debugMode" : 1,
+    "debugMode": 1,
     "noCache": false,
-    "showFPS" : true,
-    "frameRate" : 60,
-    "id" : "gameCanvas",
-    "renderMode" : 0,
-    "engineDir":"../",
-
-    "modules" : ["cocos2d"],
-
-    "jsList" : [
+    "showFPS": true,
+    "frameRate": 60,
+    "id": "gameCanvas",
+    "renderMode": 0,
+    "engineDir": "../",
+    "modules": ["cocos2d"],
+    "jsList": [
         "src/resource.js",
         "src/myApp.js"
-    ]
+    ],
+    "window": {
+        "title": "Whack-a-Whale",
+        "width": 1024,
+        "height": 1024
+    }
 }
