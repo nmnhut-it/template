@@ -5,6 +5,7 @@
 2. Before starting, run `npm install` to ensure all dependencies are installed.
 3. The game resources and images are located in the `res` directory.
 4. Use the MCP tool to get image positioning information. Specify absolute paths when using this tool.
+5. Exisiting javascript files in the project are only example. Modify it to accommodate user's need.
 
 ## Technical Requirements
 1. Game canvas and background:
