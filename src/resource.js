@@ -4,8 +4,7 @@ var res = {
     hammer_png: "res/hammer.png"
 };
 
-var g_resources = [
-    res.background_png,
-    res.whale_png,
-    res.hammer_png
-];
+var g_resources = [];
+for (var i in res) {
+    g_resources.push(res[i]);
+}
