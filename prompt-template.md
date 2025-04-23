@@ -164,5 +164,4 @@
 1. Complete implementation of the game according to the design specifications
 2. Well-structured JavaScript code files with appropriate documentation
 3. Comprehensive test coverage with detailed test cases.
-4. Run the tests, analyze console log, detect bugs and try your best to fix the bugs. 
-5. Provide instruction on how to run the game. 
+4. Run the tests, analyze console log, detect bugs and try your best to fix the bugs.  
