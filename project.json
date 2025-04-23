@@ -9,7 +9,9 @@
     "engineDir": "libs/",
     "modules": ["cocos2d"],
     "jsList": [
+        "src/TestRunner.js",
         "src/resource.js",
+        "src/GameCore.js",
         "src/myApp.js"
     ],
     "width": 1024,
