@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "puppeteer": "^24.6.1"
+  },
+  "scripts": {
+"start": "cmd /c start index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

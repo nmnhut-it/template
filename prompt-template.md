@@ -23,7 +23,7 @@
    - Separate game logic from UI components for better maintainability and
      testability.
    - Follow coding best practices.
-   - Add clear debug logs for each function to aid in troubleshooting.
+   - Add clear debug logs for every function and conditional branch to aid in troubleshooting.
 
 ## Testing Framework Implementation
 1. Since Cocos2d-JS doesn't natively support testing, implement a simple test framework directly into your game code:
