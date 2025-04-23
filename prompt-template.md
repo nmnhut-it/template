@@ -16,6 +16,7 @@
    - Properly set up resources. 
    - Implement the game logic in one or two well-organized JavaScript files.
    - Separate game logic from UI components for better maintainability and testability.
+   - Follow coding best practices. 
    - Add clear debug logs for each function to aid in troubleshooting.
 
 3. Testing:
