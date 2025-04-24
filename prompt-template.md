@@ -5,8 +5,8 @@
 2. Before starting, run `npm install` to ensure all dependencies are installed.
 3. The game resources and images are located in the `res` directory.
 4. The game code files are located in the `src` directory.
-5. Do not look into ./img-size-mcp
-6. Use the MCP tool (zps-cocos) to get image positioning information. Specify
+5. Do not look into `node_modules`
+6. Use the MCP tool to get image positioning information. Specify
    absolute paths when using this tool.
 7. Existing JavaScript files in the project are only examples. Modify them to
    accommodate user's needs.
