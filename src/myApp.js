@@ -27,40 +27,45 @@ var GameLayer = cc.Layer.extend({
         // Show welcome screen
         this.showWelcomeScreen();
 
-        console.log("[GameLayer] Game initialized");
+        cc.log("[GameLayer] Game initialized");
         return true;
     },
 
     setupUI: function () {
+        cc.log("[GameLayer] setupUI called");
         // Initialize your UI elements here
         // Example:
         // this.scoreLabel = new cc.LabelTTF("Score: 0", "Arial", 32);
         // this.addChild(this.scoreLabel);
-        console.log("[GameLayer] UI elements initialized");
+        cc.log("[GameLayer] UI elements initialized");
     },
 
     setupListeners: function () {
+        cc.log("[GameLayer] setupListeners called");
         // Setup your event listeners here
         // Example: mouse, keyboard, or touch events
-        console.log("[GameLayer] Event listeners setup complete");
+        cc.log("[GameLayer] Event listeners setup complete");
     },
 
     showWelcomeScreen: function () {
+        cc.log("[GameLayer] showWelcomeScreen called");
         // Show your welcome/start screen here
         // Example:
         // var welcomeMsg = new cc.LabelTTF("Click to start!", "Arial", 48);
         // this.addChild(welcomeMsg, 10, "welcome");
-        console.log("[GameLayer] Welcome screen displayed");
+        cc.log("[GameLayer] Welcome screen displayed");
     },
 
     startGame: function () {
+        cc.log("[GameLayer] startGame called");
         // Start your game logic here
         this.core.startGame();
         // Update UI, schedule updates, etc.
-        console.log("[GameLayer] Game started");
+        cc.log("[GameLayer] Game started");
     },
 
     update: function (dt) {
+        cc.log("[GameLayer] update called");
         // Reserved for future game state updates
     }
 });
@@ -69,17 +74,33 @@ var GameLayer = cc.Layer.extend({
 var GameScene = cc.Scene.extend({
     onEnter: function () {
         this._super();
+        cc.log("[GameScene] onEnter called");
         var layer = new GameLayer();
         this.addChild(layer);
-        console.log("[GameScene] Game scene created");
+        cc.log("[GameScene] Game scene created");
     }
 });
 
 // --- Test Registration and Debug Mode ---
 if (typeof TestRunner !== "undefined") {
     // Register your GameCore and resource tests here
-    // Example:
-    // TestRunner.registerTest("GameCore", "Initialization", function () { ... });
+    TestRunner.registerTest("GameCore", "Initialization", function () {
+        var core = new GameCore();
+        return TestRunner.assertEqual(core.gold, 2000, "Initial gold should be 2000")
+            && TestRunner.assertEqual(core.isGameActive, false, "Game should not be active after init")
+            && TestRunner.assertEqual(core.timeElapsed, 0, "Initial timeElapsed should be 0");
+    });
+    TestRunner.registerTest("GameCore", "Start Game", function () {
+        var core = new GameCore();
+        core.startGame();
+        return TestRunner.assertEqual(core.isGameActive, true, "Game should be active after startGame");
+    });
+    TestRunner.registerTest("GameCore", "End Game", function () {
+        var core = new GameCore();
+        core.startGame();
+        core.endGame(true);
+        return TestRunner.assertEqual(core.isGameActive, false, "Game should not be active after endGame");
+    });
 }
 
 // --- Run tests in debug mode ---
